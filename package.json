@@ -2,12 +2,9 @@
   "name": "e-commerce",
   "private": true,
   "version": "0.0.0",
-"homepage": "https://3592195halasaber.github.io/ViteTest2",
-
+  "homepage": "https://3592195halasaber.github.io/ViteTest2",
   "type": "module",
   "scripts": {
-
-
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
