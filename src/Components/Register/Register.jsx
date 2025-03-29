@@ -32,11 +32,11 @@ export default function Register() {
     }
   }
   const yupSchema = Yup.object().shape({
-    name: Yup.string().required().min(5).max(15),
-    email: Yup.string().required().email('envalide email'),
-    password: Yup.string().required().matches(/^[A-Z].{3,}/),
-    rePassword: Yup.string().required().oneOf([Yup.ref("password")]),
-    phone: Yup.string().required("phone number is requierd").matches(/^01[0251][0-9]{8}$/, "not valide egyption number")
+    name:Yup.string().required("name is required").min(5, "must be at least 5 letters").max(10),
+    email:Yup.string().required().email('envalide email'),
+    password:Yup.string().required().matches(/^[A-Za-z0-9]{6,10}$/),
+    rePassword:Yup.string().required().oneOf([yup.ref("password")]),
+    phone:Yup.string().required().matches(/^01[0125][0-9]{8}$/), "not valide egyption number")
   }
   )
   const formik = useFormik({
