@@ -35,7 +35,7 @@ function App() {
         element: <LayOut />,
         children: [
           { index: true, element: <Register /> },
-          { path: 'Login', element: <Login /> },
+          { index:true, path: 'Login', element: <Login /> },
           { path: 'ForgetPasswored', element: <ForgetPasswored /> },
           { path: 'RePasswored', element: <RePasswored /> },
           { path: 'NewPasswored', element: <NewPasswored /> },
